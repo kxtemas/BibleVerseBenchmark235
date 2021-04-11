@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+ <style>
+ body {
+	background-color: lightblue;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+}
+
+.search {
+	width: 100%;
+	left: 50%;
+	display: flex;
+}
+
+.searchTerm {
+	border: 3px solid #00B4CC;
+	padding: 5px;
+	left: 50%;
+	border-radius: 5px 0 0 5px;
+	outline: none;
+	color: #9DBFAF;
+}
+
+.searchTerm:focus {
+	color: #00B4CC;
+}
+
+.searchButton {
+	
+	border: 1px solid #00B4CC;
+	background: #00B4CC;
+	text-align: center;
+	color: #fff;
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
+	font-size: 20px;
+		width: 65%;
+}
+
+.form {
+	margin: 0 auto;
+	width: 250px;
+}
+
+.center {
+	text-align: center;
+}
+
+.p {
+	border: 3px;
+	border-style: solid;
+	border-color: #00B4CC;
+	padding: 1em;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+}
+ </style>
+ 
+ </h:head> 
+<body>
+<h:form align="right">
+		<h2>
+			<p>Search: #{search.book} #{search.chapter} : #{search.verse}</p>
+		</h2>
+	</h:form> 
+<h:form align="center">
+		<div class="p">
+			<p>#{scripture.scripture}</p>
+		</div>
+	</h:form>
+	<div class="form">
+	<form>
+	<h:link value="Search Again" outcome="Home" class="searchButton"/>
+	
+	</form>
+	</div>
+</body> 
+</html>
